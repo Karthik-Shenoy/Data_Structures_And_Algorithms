@@ -3,7 +3,7 @@
 ## Classical Dp problems
 
 - Knapsack Dp
-- Dp on Paths in A Grid
+- Dp on Paths in a Grid
 - Longest Common Subsequence (LCS)
 - Bitmask Dp
 
