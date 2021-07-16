@@ -23,9 +23,28 @@ ll solve(ll m, ll n)
 	return dp[m][n] = ways;
 }
 
-void iterative(ll m, ll n)
+void iterative(ll n)
 {
-
+	memset(dp, 0, sizeof(dp));
+	if(grid[0][0] != '*')
+		dp[0][0] = 1;
+	for(int i = 0; i < n; i++)
+	{
+		for(int j = 0; j < n; j++)
+		{
+			if(grid[i][j] == '*')
+			{
+				dp[i][j] = 0;
+				continue;
+			}
+			if(i-1 >= 0 && grid[i-1][j] !='*')
+				dp[i][j] = (dp[i][j] + dp[i-1][j]) % MOD;
+			if(j-1 >= 0 && grid[i][j-1] != '*')
+				dp[i][j] = (dp[i][j] + dp[i][j-1]) % MOD;
+		}
+	}
+	cout << dp[n-1][n-1];
+	return;
 }
 
 int main()
@@ -38,6 +57,9 @@ int main()
 	cin >> m;
 	for(int i = 0; i < m; i++)
 		cin >> grid[i];
+
+	// RECURSIVE
+	/*
     ll ans = solve(m-1, m-1);
     if(ans == -1)
     {
@@ -45,4 +67,8 @@ int main()
     	return 0;
     }
     cout << ans;
+    */
+
+    // ITERATIVE
+    iterative(m);
 }
