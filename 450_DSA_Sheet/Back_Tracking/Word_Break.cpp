@@ -29,6 +29,7 @@ vector<string> solve(int index, string& str, map<string, bool>& dic)
     }
     return ret;
 }
+
 vector<string> wordBreak(int n, vector<string>& dict, string s)
 {
     // code here
@@ -36,4 +37,22 @@ vector<string> wordBreak(int n, vector<string>& dict, string s)
     for(auto x: dict)
         dic[x] = 1;
     return solve(0, s, dic);
+}
+
+int main()
+{
+    int n;
+    string s;
+    vector<sting> dict;
+    cin >> n;
+    for(int i = 0; i < n; i++)
+    {
+        string temp;
+        cin temp;
+        dict.push_back(temp);
+    }
+    cin >> s;
+    vector<string> ans = wordBreak(n, dict, s);
+    for(auto x:ans)
+        cout << x << "\n";
 }
