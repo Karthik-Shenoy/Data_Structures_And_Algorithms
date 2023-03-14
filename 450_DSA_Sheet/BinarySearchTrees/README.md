@@ -1,3 +1,4 @@
-# Data Structures And Algorithms For Competitive Coding And Interviews
+# Binary Search Trees
 
-![forthebadge made-with-python](https://forthebadge.com/images/badges/made-with-c-plus-plus.svg)
+## Problems
+-Search in a binary search tree (https://leetcode.com/problems/search-in-a-binary-search-tree/)
